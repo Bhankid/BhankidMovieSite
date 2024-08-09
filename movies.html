@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Movies</title>
+</head>
+<body>
+<!-- index.html -->
+<div class="wrapper">
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li>
+        <a href="#"><i class="fa fa-search"></i> Search</a>
+      </li>
+      <li>
+        <a href="index.html"><i class="fa fa-home"></i> Home</a>
+      </li>
+      <li>
+        <a href="movies.html"><i class="fa fa-film"></i> Movies</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-random"></i> Shuffle</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="main-wrapper">
+    <main class="main-content">
+      <div class="header">
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </main>
+    <div class="filter-container" id="filter-container">
+      <h1>Filter Movies</h1>
+      <div class="filter-btns" id="filter-btns">
+        <button class="filter-btn">Action</button>
+        <button class="filter-btn">Drama</button>
+        <button class="filter-btn">Comedy</button>
+        <button class="filter-btn">Fantasy</button>
+        <button class="filter-btn">Mystery</button>
+        <button class="filter-btn">Animation</button>
+        <button class="filter-btn">War</button>
+        <button class="filter-btn">Crime</button>
+        <button class="filter-btn">History</button>
+        <button class="filter-btn">Thriller</button>
+        <button class="filter-btn">Horror</button>
+        <button class="filter-btn">Family</button>
+        <button class="filter-btn">Science Fiction</button>
+        <button class="filter-btn">Adventure</button>
+        <button class="filter-btn">Reset Filter</button>
+        <button id="play-btn">Play</button>
+      </div>
+    </div>
+    <div class="movie-section">
+      <div class="movie-container" id="movie-container">
+        <!-- Movies will be populated here -->
+      </div>
+      <div id="load-more-container"></div>
+    </div>
+  </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

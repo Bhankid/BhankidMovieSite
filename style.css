@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /*stack elements vertically on smaller screens */
+}
+
+.sidebar {
+  width: 150px;
+  background-color: hsla(0, 0%, 13%, 0.698);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -150px; /* Move the sidebar off-screen by default */
+  transition: left 0.5s;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  text-align: left;
+}
+
+.sidebar ul li a {
+  color: #bbb;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li a i {
+  margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+  color: #fff;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+.main-content {
+  margin-left: 0; /* Remove the margin-left to make the content take up the full width */
+  padding: 20px;
+  flex: 1; /*make the content take up the available space */
+  transition: margin-left 0.5s; /*transition to smoothly move the content */
+}
+
+#sidebar.active + .main-content {
+  margin-left: 150px; /* Move the content to the right when the sidebar is active */
+}
+
+#sidebar.active + .main-wrapper {
+  margin-left: 150px;
+}
+
+.main-wrapper {
+  transition: margin-left 0.3s ease;
+}
+.header {
+  display: flex;
+  flex-direction: column; /* Change to column to stack elements vertically */
+  align-items: flex-start;
+  flex-wrap: wrap; /*wrap the header elements on smaller screens */
+}
+
+.logo-text {
+  font-size: 2rem;
+}
+
+.logo-text span {
+  color: hsla(357, 92%, 47%, 0.845);
+}
+.stream-info {
+  font-size: 1.2em;
+  margin: 20px 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  background-color: hsla(357, 92%, 47%, 0.845);
+  color: white;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: hsla(357, 92%, 47%, 0.961);
+  transition: all 0.5s ease-in-out;
+}
+
+.movie-section {
+  margin-top: 20px;
+}
+
+.movie-section h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /*center the movie cards */
+}
+
+.movie-card {
+  flex: 1; /*make the movie cards take up the available space */
+  max-width: 450px; /*maximum width to prevent the cards from getting too wide */
+  margin: 10px; /*margin to create a gap between the cards */
+  background-color: #333;
+  padding: 6px 6px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.movie-card h3 {
+  margin: 10px 0 0;
+}
+
+#load-more-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.filter-container h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.filter-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.movie-details {
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+}
+
+.movie-info {
+  margin: 10px 0 15px 0;
+}

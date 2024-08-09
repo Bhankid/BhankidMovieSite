@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Movie Site</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar" id="sidebar">
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-search"></i> Search</a>
+          </li>
+          <li>
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="movies.html"><i class="fa fa-film"></i> Movies</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-random"></i> Shuffle</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="main-content">
+        <div class="header">
+          <h1 class="logo-text">FRE<span>e</span>D.<span>WATCH</span></h1>
+          <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="stream-info">
+            Streams: <span id="stream-count">0</span>
+          </div>
+          <div class="actions">
+            <button id="play-btn">Play</button>
+            <button id="watch-later-btn">Watch Later</button>
+          </div>
+        </div>
+        <div class="movie-section">
+          <h2>Movies to Watch</h2>
+          <div class="movie-container" id="movie-container">
+            <!-- Movies will be populated here -->
+          </div>
+          <div id="load-more-container""></div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
