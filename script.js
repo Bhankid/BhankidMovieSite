@@ -229,3 +229,45 @@ const hamburger = document.getElementById("hamburger");
 hamburger.addEventListener("click", () => {
   sidebar.classList.toggle("active");
 });
+
+const searchTrigger = document.querySelector(".search-trigger");
+const searchInput = document.querySelector(".search-input");
+const searchBtn = document.querySelector(".search-btn");
+
+searchTrigger.addEventListener("click", () => {
+  searchTrigger.classList.toggle("active");
+  searchInput.focus();
+  searchBtn.style.display = searchTrigger.classList.contains("active")
+    ? "block"
+    : "none";
+});
+
+searchBtn.addEventListener("click", () => {
+  const searchKeyword = searchInput.value.trim().toLowerCase(); // trim to remove whitespace
+  if (searchKeyword) {
+    // check if the search keyword is not empty
+    const filteredMovies = allMovies.filter((movie) => {
+      return (
+        movie.title.toLowerCase().includes(searchKeyword) ||
+        movie.overview.toLowerCase().includes(searchKeyword)
+      );
+    });
+    displayMovies(filteredMovies);
+  } else {
+    // handle the case when the search keyword is empty
+    // you can display all movies or show an error message
+    displayMovies(allMovies); // display all movies
+  }
+  searchInput.value = ""; // clear the search input
+});
+
+// example implementation of displayMovies function
+function displayMovies(movies) {
+  const movieList = document.querySelector(".movie-list");
+  movieList.innerHTML = ""; // clear the movie list
+  movies.forEach((movie) => {
+    const movieElement = document.createElement("div");
+    movieElement.textContent = movie.title;
+    movieList.appendChild(movieElement);
+  });
+}

@@ -186,3 +186,66 @@ button:hover {
 .movie-info {
   margin: 10px 0 15px 0;
 }
+
+.search-input {
+  position: relative;
+  display: none;
+  width: 150px;
+  padding: 8px 10px;
+  border: .8px solid hsla(357, 92%, 47%, 0.961);
+  border-radius: 10px;
+  font-size: .8rem;
+  background-color: hsla(0, 0%, 13%, 0.698); 
+  color: #fff;
+  transition: all 0.5s ease-in-out; /* added transition effect */
+}
+
+.search-trigger {
+  cursor: pointer;
+}
+
+.search-trigger.active {
+  background-color: hsla(0, 0%, 13%, 0.698);
+  border-bottom: 1px solid hsla(357, 92%, 47%, 0.715);
+}
+
+.search-trigger.active ~ .search-input {
+  display: block;
+  width: 100%; 
+  color: #fff;
+  border: .8px solid hsla(357, 92%, 47%, 0.715); 
+  transition: all 0.5s ease-in-out; /* added transition effect */
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-btn {
+  position: absolute;
+  top: 50%; 
+  right: 10px; 
+  transform: translateY(-50%); 
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* hide the search button by default */
+}
+
+.search-btn:hover {
+  color: hsla(357, 92%, 47%, 0.961);
+  background-color: transparent;
+}
+
+.search-btn i {
+  font-size: 16px;
+}
+
+.search-trigger.active ~ .search-input .search-btn {
+  display: block; /* show the search button when the search input is active */
+  top: 55%; 
+  transform: translateY(-55%); 
+}
